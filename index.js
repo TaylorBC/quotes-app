@@ -1,19 +1,29 @@
- const getQuotes = () => { 
-     return fetch('https://animechan.vercel.app/api/random')
-        .then(response => response.json())
-        .then(quote => console.log(quote)) } 
+getQuotes = () => {
+    return fetch('https://animechan.vercel.app/api/random') 
+    .then(res => res.json())
+} 
+const createQuoteDiv = (animeQuote) => {
+    const quoteContainer = document.createElement('div') 
+    const anime = document.createElement('h2') 
+    const character = document.createElement('h3') 
+    const quote = document.createElement('p') 
+    
+    anime.innerText = animeQuote.anime 
+    character.innerText = animeQuote.character 
+    quote.innerText = animeQuote.quote 
+    
+    quoteContainer.append(anime, character, quote) 
 
-        getQuotes().then(quote => { 
-            makeQuoteDiv(quote)
-        }) 
-        
-        const makeQuoteDiv = (quote) => {
-            const div = document.createElement('div') 
-            const h3 = document.createElement('h3') 
-            const p = document.createElement('p') 
-            const a = document.createElement('h3') 
-            
-        }
+    return quoteContainer
+
+}
+
+
+getQuotes().then((quote) => { 
+    const quoteDiv = createQuoteDiv(quote)
+    console.log(quoteDiv)
+
+})
 
 
         
