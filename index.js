@@ -19,15 +19,19 @@ const createQuoteDiv = (animeQuote) => {
 } 
 const appendQuote = (quoteDiv) => { 
     const quoteContainer = document.getElementById('quote-container') 
-    quoteContainer.append(quoteDiv)
+    quoteContainer.innerHTML = ""
+    quoteContainer.append(quoteDiv) 
+
+} 
+
+const generateQuote = () => { 
+    getQuotes().then((quote) => { 
+        const quoteDiv = createQuoteDiv(quote)
+        appendQuote(quoteDiv)
+    })
 
 }
 
-
-getQuotes().then((quote) => { 
-    const quoteDiv = createQuoteDiv(quote)
-    appendQuote(quoteDiv)
-})
 
 
         
