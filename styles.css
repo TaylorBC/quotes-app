@@ -2,4 +2,38 @@ body {
     min-height: 100vh;
     background-image: linear-gradient(to right, #4facfe 0%, #00f2f3 100%); 
     font-family: "Roboto", sans-serif;
+} 
+
+.quote-container {
+    background: white; 
+    border-radius: 5px; 
+    display: grid; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 40px; 
+    width: 50%; 
+    margin-top: 15%; 
+    box-shadow: 2px 2px 2px #888888;
+} 
+
+.anime {
+    font-size: 55px; 
+    font-weight: 700; 
+    color: #a9a9a9; 
+    text-align: center; 
+    margin-top: 10%;
+} 
+
+.new-quote-btn {
+    color: white; 
+    background: #00f2f3; 
+    outline: none; 
+    max-width: 75%; 
+    margin: auto; 
+    padding: 15px; 
+    font-size: 20px; 
+    font-weight: 600; 
+    border-radius: 25px; 
+    border: transparent; 
+    cursor: pointer;
 }

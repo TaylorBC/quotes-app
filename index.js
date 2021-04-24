@@ -20,6 +20,8 @@ const createQuoteDiv = (animeQuote) => {
 const appendQuote = (quoteDiv) => { 
     const quoteContainer = document.getElementById('quote-container') 
     quoteContainer.innerHTML = ""
+
+    
     quoteContainer.append(quoteDiv) 
 
 } 
