@@ -16,13 +16,17 @@ const createQuoteDiv = (animeQuote) => {
 
     return quoteContainer
 
+} 
+const appendQuote = (quoteDiv) => { 
+    const quoteContainer = document.getElementById('quote-container') 
+    quoteContainer.append(quoteDiv)
+
 }
 
 
 getQuotes().then((quote) => { 
     const quoteDiv = createQuoteDiv(quote)
-    console.log(quoteDiv)
-
+    appendQuote(quoteDiv)
 })
 
 
